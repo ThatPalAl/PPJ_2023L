@@ -1,6 +1,4 @@
-package KolokwiumInternetowe2023L.Zad2;
-
-import java.util.InputMismatchException;
+package KolokwiumInternetowe2023L.Zad6;
 
 public class Temperature {
 

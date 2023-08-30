@@ -1,4 +1,4 @@
-package KolokwiumInternetowe2023L.Zad2;
+package KolokwiumInternetowe2023L.Zad6;
 
 public class InvalidTempException extends Exception{
     public InvalidTempException() {
