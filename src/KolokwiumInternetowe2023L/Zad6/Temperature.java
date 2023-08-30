@@ -12,9 +12,9 @@ public class Temperature {
 
     }
 
-    public void validate(double celsiusTemp, double fahrenheitTemp, double kelvinTemp) throws InvalidTempException {
+    public void validate(double celsiusTemp, double fahrenheitTemp, double kelvinTemp) {
         int counter = 0;
-        if(kelvinToFahrenheit(kelvinTemp) > 0.5){
+        if (kelvinToFahrenheit(kelvinTemp) > 0.5) {
             counter++;
         }
         if (kelvinToCelsius(celsiusTemp) > 0.5) {
@@ -23,8 +23,14 @@ public class Temperature {
         if (fahrenheitToCelsius(fahrenheitTemp) > 0.5) {
             counter++;
         }
-        if(counter > 1){
-            throw  new InvalidTempException();
+        if (counter > 1) {
+            try {
+                throw new InvalidTempException();
+            } catch (InvalidTempException e) {
+                throw new RuntimeException(e);
+            }
+
+
         }
     }
 
